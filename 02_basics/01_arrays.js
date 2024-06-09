@@ -1,0 +1,70 @@
+/*
+ ARRAY => IT IS AN OBJECT THAT ENABLES STORING A COLLECTION OF MULTIPLE ITEMS UNDER A SINGLE VARIABLE NAME
+          AND HAS MEMBERS FOR PERFORMING COMMON ARRAY OPERATIONS.
+*/
+
+const myArray = [0,1,2,34,true,"aman"] // ELEMENTS OF THE ARRAY CAN BE OF ANY DATATYPE(ARRAY,OBJECTS,BOOLEANS,NUMBERS,etc)
+
+// 2ND WAY TO DEFINE ARRAY
+const myArray2 = new Array(1,2,3,4)
+console.log(myArray2[2]);
+
+// JAVASCRIPT ARRAYS ARE RESIZABLE 
+
+// ELEMENTS OF THE ARRAY CAN BE ACCESSED USING THE PARTICULAR INDEX OF THE ELEMENT
+
+// JAVASCRIPT ARRAYS ARE ZERO-INDEXED
+
+// SHALLOW COPY => A SHALLOW COPY OF AN OBJECT IS A COPY WHOSE PROPERTIES SHARE THE SAME REFERENCES
+//                 MATLAB HAM JOH BHI CHANGE KARENGE WOH ORIGINAL MEIN BHI CHANGE HOGA
+
+// DEEP COPY => A DEEP COPY OF AN OBJECT IS A COPY WHOSE PROPERTIES DO NOT SHARE THE SAME REFERENCES
+//              MATLAB HAMARE ORIGINAL MEIN KOI CHANGE NAHI HOGA, AGAR HAM VALUES KO CHANGE KARTE BHI HAI TOH
+
+// JAVASCRIPT ARRAY-COPY OPERATIONS CREATES SHALLOW COPIES 
+// (ALL STANDARD BUILT-IN COPY OPERATIONS WITH ANY JAVASCRIPT OBJECTS CREATE SHALLOW COPIES, RATHER THAN DEEP COPIES)
+
+// *************************** ARRAY METHODS *************************************
+
+const myArr = [1,2,3,4]
+myArr.push(5)  // push ADDS A ELEMENT TO THE ARRAY 
+console.log(myArr);
+myArr.push(6)   
+console.log(myArr);
+
+myArr.pop() // pop() SIMPLY REMOVES THE LAST ELEMENT OF THE ARRAY
+console.log(myArr);
+
+myArr.unshift(9) // unshift ADDS 9 TO THE START OF THE ARRAY, 
+//                  BUT IT'S COMPLEXITY IS VERY HIGH BECAUSE WE ARE REARRANGING THE WHOLE ARRAY
+
+console.log(myArr);
+myArr.shift()  // shift REMOVES THE FIRST ELEMENT OF THE ARRAY
+console.log(myArr);
+
+console.log(myArr.includes(9));
+console.log(myArr.indexOf(9)); // IT WILL RETURN -1 BECAUSE IT IS NOT PRESENT IN THE ARRAY
+
+const newArr = myArr.join() // join() BINDS THE ELEMENTS TOGETHER AND CONVERT IT INTO A STRING
+console.log(myArr);
+console.log(typeof myArr); // RETURNS AN object
+console.log(newArr);
+console.log(typeof newArr);  // RETURNS AN string
+
+
+// SLICE, SPLICE
+
+console.log("A ",myArr);
+
+const myn1 = myArr.slice(1,3) // 3 IS NOT INCLUDED
+console.log(myn1);
+console.log("B ",myArr);
+
+const myn2 = myArr.splice(1,3)
+console.log(myn2);
+console.log("C ",myArr);
+
+/*
+  slice DOES NOT CHANGE THE ORIGINAL ARRAY 
+  WHILE splice REMOVES THE ELEMENTS FROM THE ORIGINAL ARRAY WHICH ARE FETCHED BY splice
+*/
