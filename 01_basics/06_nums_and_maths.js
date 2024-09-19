@@ -5,10 +5,10 @@ const balance = new Number(100) // EXPLICITLY DEFINING A NUMBER => HERE WE ARE D
 console.log(balance);  // THE OUTPUT WILL BE A LITTLE BIT DIFFERENT
 
 console.log(balance.toString().length);
-console.log(balance.toFixed(1)); // 2 IS THE VALUE OF NUMBERS THAT WE WANT AFTER THE DECIMAL PLACE => 100.00 
+console.log(balance.toFixed(2)); // 2 IS THE VALUE OF NUMBERS THAT WE WANT AFTER THE DECIMAL PLACE => 100.00 
 
 const otherNumber = 28.66
-console.log(otherNumber.toPrecision(3)); // 
+console.log(otherNumber.toPrecision(3)); // FORMATTING THE NUMBER otherNumber TO 3 SIGNIFICANT DIGITS
 
 const hundreds = 10000000
 console.log(hundreds.toLocaleString());  // THE OUTPUT IS BASED ON US(UNITED STATES OF AMERICA) STANDARDS
