@@ -11,10 +11,16 @@ const title = "Shahi"
 
 console.log(`Hello my name is ${name} and my title is ${title}`);
 
-const gameName = new String('Aman')
+const gameName = new String('Aman') // HERE A STRING OBJECT IS CREATED, NOT A PRIMITIVE STRING.
+                                    // THE RESULT IS NOT A PRIMITIVE STRING BUT AN OBJECT.
+                                    // AVOID USING new String() UNLESS YOU SPECIFICALLY NEED A String OBJECT.
+
+                // PRIMITIVE STRING IS A BASIC STRING VALUE. e.g. 'AMAN'
+                // A STRING OBJECT ( CREATED USING new String() ) IS AN OBJECT THAT WRAPS THE PRIMITIVE STRING AND ADDS ADDITIONAL PROPERTIES AND METHODS
+                                    
 
 console.log(gameName[0]);  // RETURNS THE VALUE OF THE STRING AT 0-th INDEX
-                           // HERE IS NOT AN ARRAY, IT IS AN OBJECT, THAT'S WHY WE CAN ACCESS IT'S INDEXES
+                           // HERE IT IS NOT AN ARRAY, IT IS AN OBJECT, THAT'S WHY WE CAN ACCESS IT'S INDEXES
 console.log(gameName.__proto__);  // RETURNS AN OBJECT WHICH CONTAINS ALL THE FUNCTIONS FOR THE STRING
 
 console.log(gameName.length);  // WE CAN DIRECTLY USE length FUNCTION 
@@ -36,7 +42,7 @@ const newString = gameName1.substring(0,4) // IT WILL RETURN THE VALUE TILL THE 
                                 // const newString = gameName1.substring(-8,4) => IT WILL RETURN THE SAME VALUE => hite
 console.log(newString);
 
-const anotherString = gameName1.slice(-8,-4) // slice RETURNS A PART OF THE STRING  
+const anotherString = gameName1.slice(-8,-4) // slice RETURNS A PART OF THE STRING BETWEEN -8 TO -5 (-4-1)
 console.log(anotherString);  
 
 const newString1 = "     AMAN    "
@@ -59,3 +65,4 @@ console.log(url.includes('aman'));
 
 const StringList = "Aman Shahi is a Music Producer"
 console.log(StringList.split(" ")); // split IS USED ON THE BASIS OF WHITE-SPACES
+                                    // AN ARRAY IS RETURNED
