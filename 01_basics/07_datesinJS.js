@@ -20,8 +20,11 @@ console.log(typeof myDate);  // IT IS AN OBJECT
 let myCreatedDate = new Date(2024,0,23) // (YEAR, MONTH, DATE)
 console.log(myCreatedDate.toDateString());
 
-/* NOTE:- MONTHS STARTS FROM 0 IN JAVASCRIPT WHEN WE WRITE IT AS A SINGLE DIGIT
-          BUT IF WE ARE USING FORMATS LIKE YY--DD-MM OR ANY ELSE FORMAT, THEN THE MONTH STARTS FROM 1
+/* NOTE:-
+   - In JavaScript's `Date` object, months start from 0. 
+     (January = 0, February = 1, ..., December = 11).
+   - But when you format or display dates (like in MM/DD/YYYY), months start from 1.
+     (January = 1, February = 2, ..., December = 12).
 */
 
 let myCreatedDateWithFormat = new Date("2024-02-14")
@@ -36,20 +39,21 @@ console.log(myCreatedDateWithTime1.toLocaleString());
 console.log(myCreatedDateWithTime2.toLocaleString());
 
 // TIMESTAMPS
-let createdDate = new Date(2024,3,15)
-let myTimeStamp = Date.now()
-console.log(myTimeStamp); // OUTPUT WILL BE IN MILLISECONDS
-console.log(createdDate.getTime()); // oUTPUT WILL BE IN MILLISECONDS
+let createdDate = new Date(2024, 3, 15);  // CREATES A DATE FOR April 15, 2024 (REMEMBER, MONTHS START FROM 0)
+let myTimeStamp = Date.now();  // GETS THE CURRENT TIMESTAMP (THE NUMBER OF MILLISECONDS SINCE JANUARY 1, 1970)
+console.log(myTimeStamp); // OUTPUT WILL BE THE CURRENT TIMESTAMP IN MILLISECONDS
+console.log(createdDate.getTime()); // OUTPUT WILL BE THE TIMESTAMP FOR April 15, 2024, IN MILLISECONDS
 
 // IF WE WANT THE OUTPUT IN SECONDS THEN
 
-console.log(Math.round(Date.now()/1000)) // WE ARE USING round OR floor BECAUSE WE DON'T WANT DECIMAL PLACES
+console.log(Math.round(Date.now()/1000)) // WE ARE USING round OR floor BECAUSE WE DON'T WANT DECIMAL PLACES (WE CAN ALSO USE Math.floor() INSTEAD OF round)
 
 let newDate = new Date()
 console.log(newDate);
 console.log(newDate.getMonth()+1); // HERE MONTH IS STARTING FROM 0, SO WE HAVE ADDED +1 SO THAT THE END USER GETS IT AS USUAL
 console.log(newDate.getDay());
 
+// USING THIS WE CAN CUSTOMIZE THE DATES ACCORDING TO OUR NEEDS
 
 console.log(newDate.toLocaleString('default',{
     weekday: "long"
