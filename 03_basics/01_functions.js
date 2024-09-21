@@ -5,7 +5,7 @@ function sayMyName(){
     console.log("N");
 }
 
-// sayMyName()
+sayMyName()
 
 // PARAMETERS => THE INPUT THAT WE GIVE INSIDE THE PARENTHESIS DURING THE CREATION OF FUNCTION
 
@@ -60,8 +60,9 @@ function handleObject(anyobject){
 
 // BUT WE HAVE TO CHECK WHETHER THE anyobject IS AN OBJECT OR NOT 
 // OR THE .username AND .price IS AVAILABLE OR NOT
+
 // IN TYPESCRIPT, IT IS DONE IMPLICITLY
-// BUT IN JAVASCRIPT, WE HAVE TO WRITE SOME EXTRA CODE FOR THIS
+// BUT IN JAVASCRIPT, WE HAVE TO WRITE SOME EXTRA CODE FOR THIS (i.e., if AND else CONDITIONS)
 
 handleObject(user)
 

@@ -5,12 +5,13 @@ var d = 40
 
 if (true) {
     let a = 10
-    const b = 20
+    const b = 200
     var c = 300 // YAHA C KI VALUE CHANGE HO GAYI 
     d = 400 // YAHA BHI d KI VALUE CHANGE HO GAYI
     console.log(`INNER a: ${a} INNER b: ${b} INNER c:${c} INNER d: ${d}`);
 }
 
+console.log(`OUTER b: ${b}`);
 
 /* INTERVIEW QUESTION
 
@@ -33,6 +34,8 @@ function one() {
 }
 
 one()
+
+// CHOTE BACCHE BADE LOGO SE ICE CREAM MAANG SAKTE HAI, BUT VICE-VERSA IS NOT TRUE
 
 
 if (true) {
@@ -61,3 +64,5 @@ function addone(num) {
 const addtwo = function(num){ // FUNCTION CALL EXPRESSION
     return num+2
 }
+
+// VARIBLES ARE VERY POWERFUL IN JAVASCRIPT AS IT CAN HOLD FUNCTION, VALUES, JSON, etc.
