@@ -42,7 +42,7 @@ console.log(myArr);
 myArr.shift()  // shift REMOVES THE FIRST ELEMENT OF THE ARRAY
 console.log(myArr);
 
-console.log(myArr.includes(9));
+console.log(myArr.includes(9)); // => false
 console.log(myArr.indexOf(9)); // IT WILL RETURN -1 BECAUSE IT IS NOT PRESENT IN THE ARRAY
 
 const newArr = myArr.join() // join() BINDS THE ELEMENTS TOGETHER AND CONVERT IT INTO A STRING
