@@ -35,6 +35,9 @@ const obj2 ={3:"a",4:"b"}
 
 // const obj3 = Object.assign({},obj1,obj2) // WE HAVE ADDED {} BUT IT IS AN OPTIONAL ARGUMENT
 
+// OPTIONAL {} ADD KARNE SE YEH CONFIRM HO JAATA HAI KI SAARE OBJECTS COMBINE HONE KE BAAD 
+//EK OBJECT HI RETURN HOGA
+ 
 const obj3 ={...obj1,...obj2} // WE WILL USE THIS MOST OF THE TIMES
 console.log(obj3);
 
@@ -60,7 +63,7 @@ console.log(Object.entries(tinderUser)); // HAR EK KEY-VALUE PAIRS KO ARRAY MEIN
 console.log(tinderUser.hasOwnProperty("isLoggedIn"))
 console.log(tinderUser.hasOwnProperty("isLogged"));
 
-// DESTRUCTURING AN OBJECT
+// DE-STRUCTURING AN OBJECT
 
 const course ={
     coursename:"js in hindi",
