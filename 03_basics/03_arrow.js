@@ -16,7 +16,7 @@ user.welcomeMessage()
 user.username="archna"
 user.welcomeMessage()
 
-// console.log(this); // YEH EK EMPTY OBJECT RETURN KAREGA, KYOKI GLOBAL MEIN KOI CONTEXT HI NAHI HAI
+console.log(this); // YEH EK EMPTY OBJECT RETURN KAREGA, KYOKI GLOBAL MEIN KOI CONTEXT HI NAHI HAI
 
 /* 
    AGAR YAHI console.log(this) HAM BROWSER MEIN RUN KARAYENGE TOH WOH window OBJECT RETURN KAREGA
@@ -25,32 +25,48 @@ user.welcomeMessage()
 */
 
 /* INTERVIEW QUESTION:-
-        BROWSER KE ANDAR JOH GLOBAL OBJECT HOTA HAI WOH WINDOW OBJECT HOTA HAI
+        BROWSER KE ANDAR JOH GLOBAL OBJECT HOTA HAI WOH "WINDOW" OBJECT HOTA HAI
+        ISILIYE TOH HAM WINDOWS KE SAARE EVENTS CAPTURE KAR PAATE HAI LIKE click,form submit,etc.
 */
+
+function tea(){
+    let username = "mayank";
+    console.log(this);
+}
+
+tea()
 
 function chai(){
     let username = "shahi"
-    console.log(this.username); // FUNCTION KE ANDAR HAM this KA USE NAHI KAR PAA RAHE HAI
-                                // AAGE JAB HAM DOM MEIN MANIPULATION KARENGE, TAB YEH HAMARE KAAM AAYEGA
+    console.log(this.username); // => undefined
+    // FUNCTION KE ANDAR HAM this KA USE NAHI KAR PAA RAHE HAI
+    // AAGE JAB HAM DOM MEIN MANIPULATION KARENGE, TAB YEH HAMARE KAAM AAYEGA
 }
 
 chai()
 
 const chai2 = function(){
     let username = "rawat"
-    console.log(this.username); // undefined
+    console.log(this.username); // => undefined
 }
 
 chai2()
 
 // ARROW FUNCTION
 
-const chai3 = () => { 
-    let username = "gaurav"
+const tea3 = () => { 
+    let username = "rajat"
     console.log(this.username);
 }
 
-chai3()
+tea3() // => undefined
+
+const chai3 = () => { 
+    let username = "somya"
+    console.log(this.username);
+}
+
+chai3() // => undefined
 
 // BASIC ARROW FUNCTION
 
@@ -73,6 +89,7 @@ console.log(productTwo(3,2));
 
 // PARENTHESIS KA USE HAMNE ISLIYE KIYA KYOKI AGAR HAME KOI OBJECT RETURN KARANA HOTA TOH HAM 
 // USKO BINA PARENTHESIS KE RETURN NAHI KAR SAKTE
+// OBJECT KO RETURN KARNE KE LIYE USKO PARENTHESIS MEIN WRAP KARNA HI PADEGA
 
 const productThree = (num7,num8,num9) => ({username:"sachin"})
 console.log(productThree(2,4,3));
