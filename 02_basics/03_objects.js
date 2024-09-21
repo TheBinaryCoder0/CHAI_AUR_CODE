@@ -60,7 +60,7 @@ JsUser.greeting = function(){
     console.log("Hello JS User");
 }
 JsUser.greetingtwo = function(){
-    console.log(`Hello JS User, ${this.name}`); // this => JAB BHI HAME SAME OBJECT KO REFER KARNA HOGA TAB HAM ISKA USE KARENGE
+    console.log(`Hello JS User, ${this.name}`); // this => JAB BHI HAME SAME OBJECT KO REFER KARNA HOGA TAB HAM this USE KARENGE
 }   
 
 console.log(JsUser.greeting());
