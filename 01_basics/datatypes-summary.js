@@ -1,6 +1,11 @@
-// PRIMITIVE
+// PRIMITIVE (OR REFERENCE TYPE)
+// THESE ARE CALL BY VALUE
+// ORIGINAL DATA NAHI DIYA JAATA, INKI COPY BANAKE DI JAATI HAI
+// JOH BHI HAM CHANGES KARTE HAI DATA MEIN, WOH COPY MEIN CHANGE HOTE HAI
+// ORIGINAL DATA ABHI BHI WAISA HI REHTA HAI
 
 // 7 TYPES: String, Number, Boolean, Null, Undefined, Symbol, BigInt
+// Symbol IS USED TO MAKE A VALUE UNIQUE
 
 const score = 100
 const scoreValue = 100.3
@@ -12,7 +17,7 @@ let userEmail; // => ITS VALUE IS undefined. WE CAN ALSO WRITE IT AS let userEma
 const id = Symbol('123')
 const anotherId = Symbol('123')
 // id AND anotherId WILL NOT BE SAME
-console.log(id===anotherId);
+console.log(id===anotherId); // => false
 
 const bigNumber = 252542152511273861286n // JUST ADD n IN THE LAST OF THE NUMBER TO MAKE IT BigInt
 
@@ -25,7 +30,7 @@ const bigNumber = 252542152511273861286n // JUST ADD n IN THE LAST OF THE NUMBER
 */
 
 
-// REFERENCE (NON PRIMITIVE)
+// REFERENCE TYPE (NON PRIMITIVE)
 
 // ARRAY, OBJECTS, FUNCTIONS
 
@@ -39,7 +44,7 @@ let myObj = {
     age  : 20,
 }
 
-// FUNCTION KO BHI HAM JAVASCRIPT MEIN VARIABLE KI TARAH USE KAR SAKTE HAI
+// FUNCTION KO BHI HAM JAVASCRIPT MEIN VARIABLE KI TARAH TREAT KAR SAKTE HAI
 
 const myFunction = function(){
     console.log("Hello World");
@@ -49,3 +54,14 @@ const myFunction = function(){
 // https://262.ecma-international.org/5.1/#sec-11.4.3
 
 // IF YOU WANT TO MASTER JAVASCRIPT THEN BE A MASTER IN OBJECTS AND (WEB EVENTS/BROWSER EVENTS) 
+
+
+// RETURN VALUE OF typeof FUNCTION:-
+
+const bigNum = 152735751273152358123n;
+
+console.log(typeof null); // => object
+console.log(typeof undefined); // => undefined
+console.log(typeof bigNum); // => bigint
+
+// RETURN TYPE OF NON-PRIMITIVE => object
