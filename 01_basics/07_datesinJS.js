@@ -46,7 +46,7 @@ console.log(createdDate.getTime()); // OUTPUT WILL BE THE TIMESTAMP FOR April 15
 
 // IF WE WANT THE OUTPUT IN SECONDS THEN
 
-console.log(Math.round(Date.now()/1000)) // WE ARE USING round OR floor BECAUSE WE DON'T WANT DECIMAL PLACES (WE CAN ALSO USE Math.floor() INSTEAD OF round)
+console.log(Math.round(Date.now()/1000)) // WE ARE USING round OR floor BECAUSE WE DON'T WANT DECIMAL PLACES ( WE CAN ALSO USE Math.floor() INSTEAD OF Math.round() )
 
 let newDate = new Date()
 console.log(newDate);
