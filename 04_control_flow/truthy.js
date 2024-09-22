@@ -22,33 +22,50 @@ else{
 // LIKE 
 // "0", 'false', " ", [], {},  function(){} // EMPTY FUNCTION
 
+
+
+// HOW TO CHECK WHETHER AN ARRAY IS EMPTY OR NOT
+
 const username = []
 if(username.length===0){
     console.log("Array is empty");
 }
+
+// HOW TO CHECK IF AN OBJECT IS EMPTY OR NOT
+// Object.keys(object) RETURNS AN ARRAY
 
 const emptyObj = {}
 if(Object.keys(emptyObj).length===0){
     console.log("Object is empty");
 }
 
-console.log(false==0);
-console.log(false=='');
-console.log(0=='');
+console.log(false==0); // => true
+console.log(false==''); // => true
+console.log(0==''); // => true
 
 // LOGICAL OPERATORS
 
 // && => AGAR SAARI CONDITIONS true HONGI TAB HI EXECUTE HOGA
 // || => AGAR KOI BHI EK CONDITION true HOGI TOH EXECUTE HO JAYEGA
 
+
+
 // Nullish Coalescing Operator (??): null undefined
+
 let val1;
-// val1 = 5 ?? 10
-// val1 = null ?? 10
-// val1 = undefined ?? 15
+// val1 = 5 ?? 10 // => 5
+// val1 = null ?? 10 // => 10
+// val1 = undefined ?? 15 // => 15
 // val1 = null ?? 10 ?? 15 // JOH BHI FIRST VALUE MIL JAYEGI WOH ASSIGN HO JAATI HAI
-val1 = null ?? undefined
-console.log(val1);
+val1 = null ?? undefined // THE `??` (NULLISH COALESCING) OPERATOR CHECKS IF THE VALUE ON THE LEFT-HAND SIDE IS `NULL` OR `UNDEFINED`. 
+                         // IF IT IS, THE OPERATOR RETURNS THE VALUE ON THE RIGHT-HAND SIDE.
+console.log(val1); // => undefined
+let val2 = 0 ?? 10; // val2 WILL BE 0 BECAUSE 0 IS NOT NULL OR UNDEFINED 
+console.log(val2);
+let val3 = null ?? undefined ?? 200;
+console.log(val3);
+
+
 
 // TERNIARY OPERATOR
 
