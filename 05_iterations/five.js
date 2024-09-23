@@ -7,9 +7,14 @@ const coding = ['js','ruby','cpp','java','python']
 
 
 // USING ARROW FUNCTION (REMOVES NAME OF FUNCTION AND = BECAUSE WE DON'T HAVE TO STORE IT)
+
 // coding.forEach( (value) => {
 //     console.log(value);
 // } )
+
+
+// PASSING REFERENCE OF A FUNCTION IN forEach LOOP:-
+
 
 // function printMe(item){
 //     console.log(item);

@@ -1,4 +1,4 @@
-// const coding = ["js","ruby","java","python","cpp"]
+ // const coding = ["js","ruby","java","python","cpp"]
 
 // const values = coding.forEach( (item) => {
 //     console.log(item);
@@ -9,12 +9,13 @@
 
 // const myNums = [1,2,3,4,5,6,7,8,9,10]
 
-// // filter VALUES RETURN KARTA HAI
+// filter VALUES RETURN KARTA HAI
+
 // const newNums = myNums.filter( (num) => num > 4 )
 // // const newNums = myNums.filter( (num) => {  //  JAB BHI HAM SCOPE OPEN KARENGE TOH HAM return KEYWORD LIKHNA PADEGA
 // //    return num > 4 } )
 
-// const newNums1 = []
+// const newNums1 = []  
 
 // myNums.forEach( (num) => {
 //     if(num>4){

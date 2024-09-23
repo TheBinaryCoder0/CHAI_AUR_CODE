@@ -53,6 +53,3 @@
 //     }
 //     console.log(`value of index is ${index}`);
 // }
-
-
-

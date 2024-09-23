@@ -7,6 +7,8 @@ const myObject = {
 
 // for in LOOP ON OBJECTS
 
+// SYNTAX :-
+
 // for (const key in object) {
 //     if (Object.hasOwnProperty.call(object, key)) {
 //         const element = object[key];
@@ -14,9 +16,16 @@ const myObject = {
 //     }
 // }
 
-// for (const key in myObject) {
-//     console.log(`${key} shortcut is for ${myObject[key]}`);
-// } 
+
+
+// HOW TO GET THE KEY-VALUE PAIRS OF AN OBJECT
+
+for (const key in myObject) {
+    console.log(`${key} shortcut is for ${myObject[key]}`);
+} 
+
+
+
 
 // for in LOOP ON ARRAY
 
@@ -24,6 +33,10 @@ const myObject = {
 //  for (const key in programming) {
 //     console.log(programming[key]);
 //  }
+
+
+
+
 
 // for in LOOP ON MAPS
 

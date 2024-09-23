@@ -37,6 +37,8 @@ for (const key of map) { // RETURNS AN ARRAY
     console.log(key);
 }
 
+// DE-STRUCTURING OF AN ARRAY IN CASE OF MAPS
+
 for (const [key,value] of map) { 
     console.log(key,':-',value);
 }
@@ -50,4 +52,5 @@ for (const [key,value] of map) {
 //     console.log(key,':-',value);
 // }
 
-// YAHA OBJECTS PE ITERABLE NAHI HAI
+// YAHA OBJECTS ITERABLE NAHI HAI
+// OBJECTS ITERATE KARNE KE DUSRE TARIKE HAI
