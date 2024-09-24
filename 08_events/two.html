@@ -10,9 +10,24 @@
     <button id="stop">Stop</button>
 </body>
 <script>
-    setTimeout() // THIS IS NOT A FUNCTION OF CORE JAVASCRIPT
+    // setTimeout() // THIS IS NOT A FUNCTION OF CORE JAVASCRIPT
                  // YEH HAME BROWSERS SE MILTE HAI
                  // setTimeout() IS A METHOD BUT IT ALSO CALLS AN API (IMPORTANT ASPECT)
-                 
+    // clearTimeout AUR clearInterval BHI PADHO, KYOKI AGAR WOH NAHI PADH RAHE HO ISKE SAATH TOH INTERVIEWS MEIN DIKKAT HO JAYEGI
+    
+    // SAARE OUTPUT CONSOLE MEIN DEKHO 
+    // KYOKI AISE VISIBLE NAHI HOGA
+    const sayAman = function(){
+        console.log("Aman");
+    }
+    const changeText = function(){
+        document.querySelector('h1').innerHTML = "Web Developer"
+    }
+    const changeMe = setTimeout(changeText,2000)
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(changeMe)
+        console.log("STOPPED");
+        
+    })
 </script>
 </html>
