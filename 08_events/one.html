@@ -19,21 +19,29 @@
    </div>
 </body>
 <script>
-    // document.getElementById('owl').onclick = function () {
+    // document.getElementById('owl').onclick = function () { // YEH HAME FEATURES BAHOT KAMM DETA HAI
     //     alert("owl clicked") // BUT YEH APPROACH BHI GALAT HAI 
     //     // HAME YAHA EVENT LISTENER USE KARNA CHAHIYE
     //     // KYOKI EVENT LISTENER KEWAL HAME ONCLICK FUCNTIONALITY NAHI
     //     // PROPAGATION ABILITY BHI DETE HAI
     // }
 
-    // attachEvent() WAS USED IN OLD TIMES
-    // jQuery - on
+    // BEST APPROACH (ALSO HELPFUL IN THE SCALABILITY OF THE PROJECT):- 
+    // document.getElementById('owl').addEventListener('click', function(){
+    //     alert("owl clicked again")
+    // },false) // HERE false IS DEFAULT VALUE   
+    
 
-    // LEARN THE FOLLOWING:-
+    // attachEvent() WAS USED IN OLD TIMES
+    // jQuery - .on
+
+
+    // LEARN THE FOLLOWING:-  // HELPFUL IN INTERVIEWS AND PROJECTS
     // type, timestamp, defaultPrevented,
     // target, toElement, srcElement, currentTarget,
     // clientX, clientY, screenX, screenY
     // altkey, ctrlkey, shiftkey, keyCode
+
 
     // TWO CONTEXT OF EVENT PROPAGATION:-
     // 1. EVENT BUBBLING (false)
@@ -69,10 +77,10 @@
     // // e.stopPropagation KAAM AAYEGA
     // // IT IS JUST LIKE preventDefault()
 
-    // // document.getElementById('owl').addEventListener('click', function(e){
-    // //     console.log("owl clicked");
-    // //     e.stopPropagation()
-    // // }, true)
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log("owl clicked");
+    //     e.stopPropagation()
+    // }, true)
 
     // document.getElementById('google').addEventListener('click',function(e){
     //     console.log("google clicked");
@@ -84,13 +92,18 @@
 
     // NOW WE WANT THAT WHENEVER I CLICK ON AN IMAGE, IT GETS DISAPPEARED
     document.querySelector('#images').addEventListener('click',function(e){
+        console.log(e.target.tagName);
+        if(e.target.tagName === 'IMG'){
+            console.log(e.target.id);
+            
+            let removeIt = e.target.parentNode
+            removeIt.remove() // 1st METHOD
+            // removeIt.parentNode.removeChild(removeIt) // 2nd METHOD 
+        }
         // console.log(e.target.parentNode);
-        let removeIt =e.target.parentNode
-        removeIt.remove() // 1st METHOD
-        // removeIt.parentNode.removeChild(removeIt) // 2nd METHOD 
     },false) 
 
-    // LEARN ABOUT tagName
+    // LEARN ABOUT tagName, Event Spillover
     
 </script>
 </html>
