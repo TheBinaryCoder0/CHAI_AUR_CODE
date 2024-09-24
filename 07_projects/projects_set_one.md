@@ -13,7 +13,7 @@ const body = document.querySelector('body')
 
 buttons.forEach( (button) => {
   console.log(button);
-  button.addEventListener('click',function(e){ // YAHA e EK OBJECT HAI BAS (LIKE A VARIABLE)
+  button.addEventListener('click',function(e){ // YAHA e EK EVENT KA OBJECT HAI BAS (LIKE A VARIABLE)
     console.log(e);
     console.log(e.target); // ISSE PATA CHAL JAYEGA KI EVENT AA KAHA SE RAHA HAI
     if(e.target.id === "grey"){
@@ -43,12 +43,17 @@ const form = document.querySelector('form')
 // form ya toh POST type se submit hota hai ya GET type se, lekin jab bhi submit hota hai toh uski values URL ya server ke paas chali jaati hai
 // aur issi cheez ko hame rokna hai i.e., STOP THE DEFAULT ACTION OF FORM
 
-// for this, we can use a methods of events
+// for this, we can use a method of events
+
+// e.preventDefault()
 
 form.addEventListener('submit',function(e){
   e.preventDefault()
-  const height = parseInt(document.querySelector('#height').value)
+  
+  const height = parseInt(document.querySelector('#height').value) // parseInt converts strings into integers
+
   const weight = parseInt(document.querySelector('#weight').value)
+
   const results = document.querySelector('#results');
 
   if(height === '' || height<0 || isNaN(height)){
@@ -89,7 +94,9 @@ setInterval(function(){
   let date = new Date();
   // console.log(date.toLocaleTimeString());
   clock.innerHTML = date.toLocaleTimeString()
-}, 1000)
+}, 1000) // HERE 1000 is milliseconds
+
+// setInterval(function(){},1000)
 
 ```
 
@@ -97,7 +104,7 @@ setInterval(function(){
 
 ```javascript
 
-let randomNumber = (parseInt(Math.random()*100+1));
+let randomNumber = (parseInt(Math.random()*100+1)); // WE HAVE USED parseInt BECAUSE IT IS GIVING DECIMAL NUMBER
 
 const submit = document.querySelector('#subt')
 
@@ -121,12 +128,13 @@ let playGame = true
 if(playGame){
   submit.addEventListener('click', function(e){
     e.preventDefault()
-    const guess = parseInt(userInput.value)
+    const guess = parseInt(userInput.value) // STORING THE VALUE OF THE USER INPUT INSIDE guess
     console.log(guess);
     validateGuess(guess)
   })
 }
 
+// FUNCTION TO CHECK WHETHER THE INPUT DATA IS A NUMBER OR NOT
 function validateGuess(guess){
   if(isNaN(guess)){
     alert('Please enter a valid number')
@@ -150,6 +158,7 @@ function validateGuess(guess){
   }
 }
 
+// FUNCTION TO CHECK IF THE NUMBER ENTERED BY THE USER IS SAME AS THE RANDOM NUMBER OR NOT
 function checkGuess(guess){
   if(guess === randomNumber){
     displayMessage(`You guessed it right`)
@@ -163,18 +172,19 @@ function checkGuess(guess){
   }
 }
 
-// displayGuess ALSO WORKS AS A CLEANUP METHOD
 function displayGuess(guess) {
-   userInput.value = ''
+   userInput.value = ''  // displayGuess ALSO WORKS AS A CLEANUP METHOD
    guessSlot.innerHTML += `${guess}    `
    numGuess++;
    remaining.innerHTML = `${11-numGuess}`
 }
 
+// FUNCTION TO DISPLAY MESSAGE TO THE USER
 function displayMessage(message){
   lowOrHi.innerHTML = `<h2>${message}</h2>`
 }
 
+// FUNCTION TO END THE GAME
 function endGame(){
   userInput.value='' // VALUE CLEAN
   userInput.setAttribute('disabled', '')
@@ -185,6 +195,7 @@ function endGame(){
   newGame()
 }
 
+// FUNCTION TO START A NEW GAME
 function newGame(){
   const newGameButton = document.querySelector('#newGame')
   newGameButton.addEventListener('click',function(e){
@@ -199,6 +210,9 @@ function newGame(){
   })
 }
 
+// KEEP THE TRACK OF THIS PROJECT USING A DETAILED VIEW OF THE DOM ON A PAPER
+
+// IF YOU HAVE A TRACK OF THIS PROJECT USING DOM THEN YOU CAN EASILY UNDERSTAND THE PROJECT AND CAN MAKE CHANGES TO IT AFTERWARDS VERY EASILY
 
 
 
