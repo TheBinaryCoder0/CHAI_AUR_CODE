@@ -19,7 +19,7 @@
     addLanguage("python")
     addLanguage("java")
     addLanguage("Ruby")
-    addLanguage("CPP")
+    addLanguage("typescript")
 
     // AB ISMEIN PROBLEM YEH HAI KI JAB HAM appendChild KAR RHE HAI
     // TOH WOH PURI TREE TRAVERSE KAR RAHA HAI KYOKI HAMNE innerHTML USE KIYA HAI
@@ -33,10 +33,14 @@
     }
     addOptiLanguage("golang")
 
-    // EDIT
 
+
+    // EDIT:-
+
+    // EDIT WITH innerHTML
     const secondLang = document.querySelector("li:nth-child(2)")
     // secondLang.innerHTML = "Mojo"
+
     // CREATED NEW ELEMENT
     const newli = document.createElement('li')
     newli.textContent = "Mojo"
@@ -46,7 +50,9 @@
     const firstLang = document.querySelector("li:first-child")
     firstLang.outerHTML = "<li>TypeScript</li>"
 
-    // REMOVE
+
+
+    // REMOVE:-
 
     const lastLang = document.querySelector("li:last-child")
     lastLang.remove()
