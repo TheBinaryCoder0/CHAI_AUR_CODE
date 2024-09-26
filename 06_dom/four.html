@@ -37,23 +37,22 @@
 
     // EDIT:-
 
-    // EDIT WITH innerHTML
+    // EDIT WITH innerHTML 
     const secondLang = document.querySelector("li:nth-child(2)")
     // secondLang.innerHTML = "Mojo"
 
-    // CREATED NEW ELEMENT
+    // CREATED NEW ELEMENT AND REPLACED THE SecondLang WITH IT
     const newli = document.createElement('li')
     newli.textContent = "Mojo"
     secondLang.replaceWith(newli)
-
+    
     // EDIT WITH outerHTML
     const firstLang = document.querySelector("li:first-child")
     firstLang.outerHTML = "<li>TypeScript</li>"
 
-
-
     // REMOVE:-
 
+    // REMOVED THE lastLang 
     const lastLang = document.querySelector("li:last-child")
     lastLang.remove()
 
