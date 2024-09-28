@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure aur chai</title>
+</head>
+<body style="background-color: #414141;">
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+</body>
+
+<script>
+
+    // function init(){
+    //     let name = "Mozilla";
+    //     function displayName(){
+    //         console.log(name);
+    //     }
+    //     displayName();
+    // }
+    // init();
+
+    // LEXICAL SCOPING:-
+
+    // inner FUNCTION HAVE ACCESS TO THE VARIABLES OF outer FUNCTION
+    
+    // PARENT KA ACCESS CHILD KO HAI
+    // LEKIN SIBLINGS KE BEECH MEIN SHARING NAHI HAI (i.e., ACCESS NAHI HAI)
+    // CHOTE TOH BADO SE MAANG SAKTE HAI, LEKIN BADE CHOTE SE NAHI MAANG SAKTE
+
+    // function outer(){
+    //     let username = "aman"
+    //     console.log("OUTER",secret); // PARENT DON'T HAVE ACCESS TO THE CHILD
+        
+    //     function inner(){
+    //         let secret = "my123"
+    //         console.log("INNER",username);
+    //     }
+    //     function innerTwo(){
+    //         console.log("innerTwo",username);
+    //         console.log(secret);
+    //     }
+    //     inner();
+    //     innerTwo();
+    // }
+    // outer()
+    // console.log("TOO OUTER",username);
+    
+
+    // CLOSURE:-
+
+    function makeFunc(){
+        const name = "Mozilla";
+        function displayName(){
+            console.log(name);
+        }
+        return displayName; // YAHA KEWAL displayName RETURN NAHI HOGA
+                            // KEWAL USKA EXECUTIONAL CONTEXT NAHI JAYEGA
+                            // YAHA PURA KA PURA LEXICAL SCOPE JAATA HAI
+                            // KEWAL SCOPE RETURN NAHI HOTA, PURA LEXICAL SCOPE RETURN HOTA HAI (IMPORTANT FOR INTERVIEWS)                        
+    }
+
+    const myFunc = makeFunc();
+    myFunc();
+
+</script>
+<script>
+
+    // USE CASE SCENARIO WHERE closure HELPED US:-
+
+    
+    // document.getElementById('orange').onclick = function(){
+    //     document.body.style.backgroundColor = `orange`
+    // }
+    // document.getElementById('green').onclick = function(){
+    //     document.body.style.backgroundColor = `green`
+    // }
+
+    function clickHandler(color){
+        // document.body.style.backgroundColor = `${color}` // THIS WILL NOT WORK BECAUSE THE FUNCTION IS EXECUTED WITHOUT CLICKING ON THE BUTTON
+        return function(){
+            document.body.style.backgroundColor = `${color}`
+        }
+    }
+
+    document.getElementById('orange').onclick = clickHandler("orange")
+    document.getElementById('green').onclick = clickHandler("green")
+</script>
+</html>
